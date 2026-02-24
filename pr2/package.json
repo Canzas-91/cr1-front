@@ -1,0 +1,12 @@
+{
+  "name": "casual-store-api",
+  "version": "1.0.0",
+  "description": "API для магазина одежды (Практика №2)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
