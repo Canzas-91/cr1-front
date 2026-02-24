@@ -2,10 +2,8 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-// Middleware для работы с JSON
 app.use(express.json());
 
-// Список товаров (временное хранилище)
 let products = [
   {
     id: 1,
@@ -27,25 +25,20 @@ let products = [
   }
 ];
 
-// Главная страница
 app.get('/', (req, res) => {
   res.send('Casual Store API');
 });
 
-// ===== CRUD =====
-
-// Получить все товары
 app.get('/products', (req, res) => {
   res.json(products);
 });
 
-// Получить товар по id
 app.get('/products/:id', (req, res) => {
   const product = products.find(p => p.id == req.params.id);
   res.json(product);
 });
 
-// Добавить товар
+
 app.post('/products', (req, res) => {
   const { title, price, image } = req.body;
 
@@ -60,7 +53,6 @@ app.post('/products', (req, res) => {
   res.status(201).json(newProduct);
 });
 
-// Обновить товар
 app.patch('/products/:id', (req, res) => {
   const product = products.find(p => p.id == req.params.id);
   const { title, price, image } = req.body;
@@ -72,13 +64,11 @@ app.patch('/products/:id', (req, res) => {
   res.json(product);
 });
 
-// Удалить товар
 app.delete('/products/:id', (req, res) => {
   products = products.filter(p => p.id != req.params.id);
   res.send('OK');
 });
 
-// Запуск сервера
 app.listen(port, () => {
   console.log(`Сервер запущен на http://localhost:${port}`);
 });
