@@ -22,7 +22,11 @@ function App() {
               <h3>{p.name}</h3>
               <p>{p.description}</p>
               <p className="price">{p.price} ₽</p>
-              <p>В наличии: {p.stock}</p>
+              <div className="stock">
+                <p>В наличии: {p.stock}</p>
+                <button className="buy-btn">Купить</button>
+              </div>
+              
             </div>
           </div>
         ))}

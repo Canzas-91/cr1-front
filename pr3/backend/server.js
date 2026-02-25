@@ -10,7 +10,7 @@ app.use(cors({ origin: "http://localhost:3001" }));
 
 let products = [
   {
-    id: nanoid(6),
+    id: 1,
     name: "Stone Island Jacket",
     category: "Outerwear",
     description: "Куртка в стиле casual",
@@ -19,7 +19,7 @@ let products = [
     image: "/images/img2.jpeg"
   },
   {
-    id: nanoid(6),
+    id: 2,
     name: "CP Company Hoodie",
     category: "Hoodies",
     description: "Худи со знаменитой линзой",
@@ -28,14 +28,60 @@ let products = [
     image: "/images/img1.jpg"
   },
   {
-    id: nanoid(6),
+    id: 3,
     name: "Casual Pants",
     category: "Pants",
     description: "Повседневные брюки",
     price: 19000,
     stock: 10,
     image: "/images/img3.jpg"
+  },
+  {
+    id: 4,
+    name: "CP Company Hoodie",
+    category: "Hoodies",
+    description: "Худи со знаменитой линзой",
+    price: 28000,
+    stock: 8,
+    image: "/images/img1.jpg"
+  },
+  {
+    id: 5,
+    name: "CP Company Hoodie",
+    category: "Hoodies",
+    description: "Худи со знаменитой линзой",
+    price: 28000,
+    stock: 8,
+    image: "/images/img1.jpg"
+  },
+  {
+    id: 6,
+    name: "CP Company Hoodie",
+    category: "Hoodies",
+    description: "Худи со знаменитой линзой",
+    price: 28000,
+    stock: 8,
+    image: "/images/img1.jpg"
+  },
+  {
+    id: 7,
+    name: "CP Company Hoodie",
+    category: "Hoodies",
+    description: "Худи со знаменитой линзой",
+    price: 28000,
+    stock: 8,
+    image: "/images/img1.jpg"
+  },
+  {
+    id: 8,
+    name: "CP Company Hoodie",
+    category: "Hoodies",
+    description: "Худи со знаменитой линзой",
+    price: 28000,
+    stock: 8,
+    image: "/images/img1.jpg"
   }
+  
 ];
 
 // GET all
