@@ -26,7 +26,7 @@
 - Единый стиль оформления страницы
 
 ### Скриншоты:
-![alt text](image.png)
+![alt text](./img-pr/image.png)
 
 
 ---
@@ -40,8 +40,8 @@
 - Подготовка структуры для дальнейшей интеграции с backend
 
 ### Скриншоты:
-![alt text](2-1.png)
-![alt text](2-2.png)
+![alt text](./img-pr/2-1.png)
+![alt text](./img-pr/2-2.png)
 
 ---
 
@@ -49,6 +49,69 @@
 **JSON и внешние API**
 
 ### Скриншоты:
-![alt text](3-1.png)
-![alt text](3-2.png)
-![alt text](3-3.png)
+![alt text](./img-pr/3-1.png)
+![alt text](./img-pr/3-2.png)
+![alt text](./img-pr/3-3.png)
+
+
+---
+
+## Практика 4  
+**React + Express (REST API)**
+
+### Выполнено:
+- Клиентская часть реализована на React
+- Серверная часть реализована на Express
+- Реализован REST API для товаров
+- CRUD-операции:
+  - Получение списка товаров
+  - Создание товара
+  - Обновление товара
+  - Удаление товара
+- Настроен CORS
+- Реализовано взаимодействие frontend ↔ backend
+
+### Используемые технологии:
+- React
+- Express
+- Axios
+- Node.js
+
+### Скриншоты:
+
+![alt text](./img-pr/4-1.png)
+![alt text](./img-pr/4-2.png)
+
+
+---
+
+## Практика 5  
+**Расширенный REST API + Swagger**
+
+### Выполнено:
+- Расширен backend из практики №4
+- Подключены библиотеки:
+  - swagger-jsdoc
+  - swagger-ui-express
+- Реализована автоматическая документация REST API
+- Описана схема сущности `Product`
+- Задокументированы все CRUD-операции:
+  - GET /api/products
+  - POST /api/products
+  - PATCH /api/products/{id}
+  - DELETE /api/products/{id}
+- Swagger UI доступен по адресу:
+  - http://localhost:3000/api-docs
+
+
+### Проверка:
+- CRUD-операции выполняются корректно
+- Запросы можно отправлять через Swagger UI (Try it out)
+- API возвращает реальные данные
+
+### Скриншоты:
+
+![alt text](./img-pr/5-1.png)
+![alt text](./img-pr/5-2.png)
+![alt text](./img-pr/5-3.png)
+![alt text](./img-pr/5-4.png)
