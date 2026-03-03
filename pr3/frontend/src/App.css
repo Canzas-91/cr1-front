@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: #111;
+  background-color: #212121;
   color: #fff;
   font-family: Arial, sans-serif;
 }
@@ -15,6 +15,7 @@ body {
   text-align: center;
   margin-bottom: 40px;
   font-size: 32px;
+  color: #ffa95e;
 }
 
 .products {
@@ -27,14 +28,12 @@ body {
 }
 
 .card {
-  background-color: #1c1c1c;
-  border-radius: 12px;
-  overflow: hidden;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
 }
 
 .card img {
@@ -71,4 +70,211 @@ body {
   border: none;
   cursor: pointer;
   border-radius: 10px;
+}
+/* ===== Toolbar (кнопка добавить товар) ===== */
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.btn-add {
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 188, 54, 0.18);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.15s, background 0.2s, border-color 0.2s;
+}
+
+.btn-add:hover {
+  background: rgba(255, 188, 54, 0.28);
+  border-color: rgba(255, 188, 54, 0.5);
+  transform: translateY(-1px);
+}
+
+.btn-add:active {
+  transform: translateY(0px);
+}
+
+/* ===== Card layout улучшения ===== */
+.card {
+  width: 280px; /* чтобы карточки были одинаковые */
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.card-content p {
+  margin: 6px 0;
+}
+
+/* Контейнер "в наличии + кнопки" */
+.stock {
+  gap: 12px;
+}
+
+/* Кнопки в колонку (вместо одной строки) */
+.actionsCol {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: stretch;
+}
+
+/* Универсальный стиль кнопок */
+.btn {
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.15s, background 0.2s, border-color 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.btn:active {
+  transform: translateY(0px);
+}
+
+/* Primary (редактировать) */
+.btn--primary {
+  background: rgba(255, 188, 54, 0.18);
+  border-color: rgba(255, 188, 54, 0.5);
+}
+
+.btn--primary:hover {
+  background: rgba(255, 188, 54, 0.28);
+}
+
+/* Danger (удалить) */
+.btn--danger {
+  background: rgba(239, 68, 68, 0.14);
+  border-color: rgba(239, 68, 68, 0.45);
+}
+
+.btn--danger:hover {
+  background: rgba(239, 68, 68, 0.22);
+}
+
+/* Buy (купить) — чуть ярче */
+.btn--buy {
+  background: #ffbc36;
+  border-color: rgba(255, 188, 54, 0.7);
+}
+
+.btn--buy:hover {
+  background: #ffc85a;
+}
+
+/* Старая кнопка buy-btn — оставим, но подружим со стилем */
+.buy-btn {
+  width: 100%;
+}
+
+/* ===== Modal ===== */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 999;
+}
+
+.modal {
+  width: 100%;
+  max-width: 520px;
+  background: #161616;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.modal__title {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.iconBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.iconBtn:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.form {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.input,
+textarea.input {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  outline: none;
+  resize: vertical;
+}
+
+.input:focus,
+textarea.input:focus {
+  border-color: rgba(255, 188, 54, 0.6);
+  box-shadow: 0 0 0 3px rgba(255, 188, 54, 0.12);
+}
+
+.modal__footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 4px;
+}
+
+/* Empty / loading */
+.empty {
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px dashed rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
 }
