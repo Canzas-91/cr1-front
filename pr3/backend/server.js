@@ -38,50 +38,49 @@ let products = [
   },
   {
     id: 4,
-    name: "CP Company Hoodie",
+    name: "CP Company свитшот",
     category: "Hoodies",
-    description: "Худи со знаменитой линзой",
-    price: 28000,
-    stock: 8,
-    image: "/images/img1.jpg"
+    description: "Свитшот с логотипом CP Company",
+    price: 12000,
+    stock: 10,
+    image: "/images/img4.jpg"
   },
   {
     id: 5,
-    name: "CP Company Hoodie",
+    name: "Свитшот Stone Island",
     category: "Hoodies",
-    description: "Худи со знаменитой линзой",
-    price: 28000,
-    stock: 8,
-    image: "/images/img1.jpg"
+    description: "Свитшот с логотипом Stone Island",
+    price: 19000,
+    stock: 20,
+    image: "/images/img5.jpg"
   },
   {
     id: 6,
-    name: "CP Company Hoodie",
-    category: "Hoodies",
-    description: "Худи со знаменитой линзой",
-    price: 28000,
-    stock: 8,
-    image: "/images/img1.jpg"
+    name: "Кепка Stone Island",
+    category: "Hats",
+    description: "Кепка с логотипом Stone Island",
+    price: 19000,
+    stock: 10,
+    image: "/images/img6.jpg"
   },
   {
     id: 7,
-    name: "CP Company Hoodie",
-    category: "Hoodies",
-    description: "Худи со знаменитой линзой",
-    price: 28000,
-    stock: 8,
-    image: "/images/img1.jpg"
+    name: "Шорты Ma.strum",
+    category: "Pants",
+    description: "Повседневные Шорты Ma.strum",
+    price: 5000,
+    stock: 10,
+    image: "/images/img7.jpg"
   },
   {
     id: 8,
-    name: "CP Company Hoodie",
-    category: "Hoodies",
-    description: "Худи со знаменитой линзой",
-    price: 28000,
-    stock: 8,
-    image: "/images/img1.jpg"
+    name: "Куртка CP Company",
+    category: "Outerwear",
+    description: "Куртка с логотипом CP Company",
+    price: 25000,
+    stock: 10,
+    image: "/images/img8.jpg"
   }
-  
 ];
 
 // GET all
