@@ -154,7 +154,9 @@ API корректно обрабатывает данные в формате J
 
 ## 📌 Результат  
 Создано полноценное клиент-серверное приложение.
-![alt text](<img-pr/Снимок экрана 2026-03-03 в 15.31.13.png>)
+<img width="1710" height="1070" alt="Снимок экрана 2026-03-03 в 22 48 37" src="https://github.com/user-attachments/assets/cdb59914-9406-475e-a091-beb58445725f" />
+<img width="1710" height="1070" alt="Снимок экрана 2026-03-03 в 22 49 54" src="https://github.com/user-attachments/assets/c0ca16a8-1849-44aa-b133-d1b466a03732" />
+<img width="1710" height="1070" alt="Снимок экрана 2026-03-03 в 22 49 42" src="https://github.com/user-attachments/assets/f3ee4864-243b-45ca-baf2-8e4086e2682b" />
 ![alt text](img-pr/4-2.png)
 # ✅ Практика 5 — Расширенный REST API + Swagger
 
@@ -188,7 +190,7 @@ http://localhost:3000/api-docs
 ## 📌 Результат  
 REST API полностью документирован и соответствует стандарту OpenAPI 3.0.
 
-![alt text](<img-pr/Снимок экрана 2026-03-03 в 15.32.33.png>)
+<img width="1710" height="1070" alt="Снимок экрана 2026-03-03 в 22 48 37" src="https://github.com/user-attachments/assets/cdb59914-9406-475e-a091-beb58445725f" />
 ![alt text](img-pr/5-1.png)
 ![alt text](img-pr/5-2.png)
 ![alt text](img-pr/5-3.png)
