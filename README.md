@@ -191,7 +191,9 @@ http://localhost:3000/api-docs
 REST API полностью документирован и соответствует стандарту OpenAPI 3.0.
 
 <img width="1710" height="1070" alt="Снимок экрана 2026-03-03 в 22 48 37" src="https://github.com/user-attachments/assets/cdb59914-9406-475e-a091-beb58445725f" />
+
 ![alt text](img-pr/5-1.png)
+
 ![alt text](img-pr/5-2.png)
 ![alt text](img-pr/5-3.png)
 ![alt text](img-pr/5-4.png)
