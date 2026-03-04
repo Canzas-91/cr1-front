@@ -233,7 +233,7 @@ REST API полностью документирован и соответств
 ### Backend
 
 ```bash
-cd backend
+cd pr5/backend
 npm install
 npm start
 ```
@@ -248,7 +248,7 @@ http://localhost:3000
 ### Frontend
 
 ```bash
-cd frontend
+cd pr3/frontend
 npm install
 npm start
 ```
