@@ -432,6 +432,204 @@ POST `/api/auth/login`
 
 ---
 
-Если хочешь — могу:
-🔥 сделать версию **ещё круче (как у топ-студентов)**
-🔥 или добавить Swagger (прям +баллы к работе)
+Да, это **практика №8**, и тебе нужно сделать **такой же README, но уже про JWT** 👍
+
+Я сделал тебе готовый вариант — просто вставь в `pr8/README.md` 👇
+
+---
+
+# 📚 Практическое занятие 8 — JWT аутентификация
+
+## 📌 Тема
+
+Базовые методы аутентификации.
+Работа с **JWT (JSON Web Token)**: создание, проверка и защищённые маршруты.
+
+---
+
+## 📖 Теория
+
+**JWT (JSON Web Token)** — это токен, который используется для аутентификации пользователя после входа в систему.
+
+📌 Принцип работы:
+
+1. Пользователь логинится
+2. Сервер проверяет данные
+3. Сервер выдаёт JWT токен
+4. Клиент отправляет токен в каждом запросе
+5. Сервер проверяет токен и даёт доступ
+
+👉 Это описано в методичке как основной процесс работы JWT 
+
+---
+
+## 🔐 Структура JWT
+
+JWT состоит из 3 частей:
+
+* Header (заголовок)
+* Payload (данные)
+* Signature (подпись)
+
+Пример:
+
+```
+xxxxx.yyyyy.zzzzz
+```
+
+---
+
+## ⚙️ Установка
+
+```bash
+npm install jsonwebtoken
+```
+
+---
+
+## 🛠️ Реализация
+
+Файл: `server.js`
+
+```js
+const jwt = require("jsonwebtoken");
+
+const JWT_SECRET = "access_secret";
+const ACCESS_EXPIRES_IN = "15m";
+
+// Создание токена
+const token = jwt.sign(
+  { sub: user.id, email: user.email },
+  JWT_SECRET,
+  { expiresIn: ACCESS_EXPIRES_IN }
+);
+
+// Проверка токена
+const payload = jwt.verify(token, JWT_SECRET);
+```
+
+---
+
+## 🔗 Реализованные маршруты
+
+| Маршрут            | Метод | Описание                                  |
+| ------------------ | ----- | ----------------------------------------- |
+| /api/auth/register | POST  | Регистрация                               |
+| /api/auth/login    | POST  | Логин (выдаёт JWT)                        |
+| /api/auth/me       | GET   | Текущий пользователь (защищённый маршрут) |
+
+---
+
+## 🔐 Middleware авторизации
+
+```js
+function authMiddleware(req, res, next) {
+  const header = req.headers.authorization || "";
+
+  const [scheme, token] = header.split(" ");
+
+  if (scheme !== "Bearer" || !token) {
+    return res.status(401).json({
+      error: "Missing or invalid Authorization header"
+    });
+  }
+
+  try {
+    const payload = jwt.verify(token, JWT_SECRET);
+    req.user = payload;
+    next();
+  } catch {
+    return res.status(401).json({
+      error: "Invalid or expired token"
+    });
+  }
+}
+```
+
+---
+
+## 👤 Сущность "Пользователь"
+
+| Поле     | Тип    | Описание      |
+| -------- | ------ | ------------- |
+| id       | string | Уникальный ID |
+| email    | string | Логин         |
+| password | string | Хеш пароля    |
+
+---
+
+## 🧪 Примеры запросов
+
+### 🔹 Логин
+
+POST `/api/auth/login`
+
+```json
+{
+  "email": "test@mail.com",
+  "password": "123456"
+}
+```
+
+👉 Ответ:
+
+```json
+{
+  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+}
+```
+
+---
+
+### 🔹 Получить текущего пользователя
+
+GET `/api/auth/me`
+
+📌 В Headers:
+
+```
+Authorization: Bearer ТВОЙ_ТОКЕН
+```
+
+👉 Ответ:
+
+```json
+{
+  "id": "1",
+  "email": "test@mail.com"
+}
+```
+
+---
+
+![alt text](<Снимок экрана 2026-04-01 в 10.04.16.png>)
+![alt text](<Снимок экрана 2026-04-01 в 10.03.58.png>)
+
+## 🔒 Защищённые маршруты
+
+В рамках задания защищены маршруты:
+
+* GET `/api/products/:id`
+* PUT `/api/products/:id`
+* DELETE `/api/products/:id`
+
+👉 доступ к ним возможен только с JWT 
+
+---
+
+## ✅ Вывод
+
+В ходе практической работы:
+
+* реализована авторизация с JWT
+* добавлена выдача токена при входе
+* реализован защищённый маршрут `/api/auth/me`
+* добавлена защита API через middleware
+
+---
+
+## 💬 Примечание
+
+JWT используется для безопасной передачи данных между клиентом и сервером и позволяет не хранить сессии на сервере.
+
+---
