@@ -1,0 +1,14 @@
+{
+  "name": "pr7-auth-products",
+  "version": "1.0.0",
+  "description": "Практическая работа 7: аутентификация и CRUD товаров",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^4.21.2",
+    "nanoid": "^3.3.8"
+  }
+}
