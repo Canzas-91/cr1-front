@@ -342,6 +342,8 @@ http://localhost:3000
 
 ---
 
+
+
 ## 🔗 Реализованные маршруты
 
 | Маршрут            | Метод  | Описание                 |
@@ -409,21 +411,9 @@ POST `/api/auth/login`
 ```
 
 ---
+![alt text](image.png)
+![alt text](<Снимок экрана 2026-04-01 в 09.37.15.png>)
 
-### 🔹 Создание товара
-
-POST `/api/products`
-
-```json
-{
-  "title": "iPhone",
-  "category": "electronics",
-  "description": "smartphone",
-  "price": 1000
-}
-```
-
----
 
 ## ✅ Вывод
 
