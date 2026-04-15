@@ -674,12 +674,8 @@ JWT используется для безопасной передачи дан
 
 ---
 
-## ⚙️ Установка
 
-```bash
-npm install
-
-
+---
 
 Практика 9 как раз требует реализовать refresh-токены и маршрут `POST /api/auth/refresh`, который возвращает новую пару токенов. :contentReference[oaicite:0]{index=0} :contentReference[oaicite:1]{index=1}
 
@@ -749,7 +745,7 @@ npm install
 
 ## 📦 Установка
 
-
+```bash
 npm install
 
 # 📚 Практическое занятие 11 — RBAC (Role-Based Access Control)
