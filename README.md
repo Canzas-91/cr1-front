@@ -685,9 +685,6 @@ npm install
 
 ---
 
-# README для `pr10`
-
-```md
 # 📚 Практическое занятие 10 — Хранение токенов на фронтенде
 
 ## 📌 Тема
@@ -752,7 +749,7 @@ npm install
 
 ## 📦 Установка
 
-```bash
+
 npm install
 
 # 📚 Практическое занятие 11 — RBAC (Role-Based Access Control)
